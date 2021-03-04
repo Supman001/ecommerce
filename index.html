@@ -7,127 +7,180 @@
     <title>E-comerce</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
    </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Super Market</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <div class="" id="mainPage">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">Super Market</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Prizing</a>
+          </li> -->
+          <li class="nav-item">
+            <button type="button" class="btn btn-primary"  onclick="showCart()" >
+              Cart <span class="badge badge-light" id="cart">0 </span>
+            </button>
+        </li>
+        </ul>
+      </div>
+    </nav>
+
+      <div class="container-fluid">
+          <div class="market-img">
+                  
+          </div>
+      </div>
       
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Prizing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Download</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+  <section id="products">
+      <h1>Our Products and their Prices:</h1>
+      <div class="row">
+          <div class="pricing-col col-lg-4 col-md-6">
+              <div class="card">
+                  <div class="card-header">
+                      <h3 class="product-name" id="pName">HP LaserJet M1120 Multifunction Printer</h3>
+                  </div>
+                  <div class="card-body">
+                      <img class="printer" src="img/printer.jpg" alt="printer">
+                      <h2 class="p-price" id="sellsPrice">$150.00</h2>
+                      <button class="btn btn-md btn-block btn-outline-dark" onclick="shopGoods('HP LaserJet M1120 Multifunction Printer', 150, 1)">Shop To Cart</button>
+                  </div>
+                  </div>
+          </div>
+  
+  <div class="pricing-col col-lg-4 col-md-6">
+      <div class="card">
+          <div class="card-header">
+              <h3 class="product-name" id="pName">Fashion Women Quartz Rhinestone Diamond</h3>
+          </div>
+          <div class="card-body">
+              <img class="shoes" src="img/wristwatch1.jpg" alt="wristwatch">
+              <h2 class="p-price" id="sellsPrice">$370.000</h2>
+              <button class="btn btn-md btn-block btn-outline-dark" onclick="shopGoods('Fashion Women Quartz Rhinestone Diamond', 370, 1)">Shop To Cart</button>
+          </div>
+          </div>
+  </div>
+  
+  <div class="pricing-col col-lg-4">
+      <div class="card">
+          <div class="card-header">
+              <h3 class="product-name" id="pName">World's first Phone with 12 GB RAM</h3>
+          </div>
+          <div class="card-body">
+              <img class="shoes" src="img/phone1.jpg" alt="phone">
+              <h2 class="p-price" id="sellsPrice">$985.000</h2>
+              <button class="btn btn-md btn-block btn-outline-dark" onclick="shopGoods('Worlds first Phone with 12 GB RAM' , 985, 1)">Shop To Cart</button>
+          </div>
+          </div>
+  </div>
 
-        <div class="container-fluid">
-            <div class="market-img">
-                    
-            </div>
-        </div>
-        
-    <section id="pricing">
-        <h1>Our Products and their Prices:</h1>
-        <div class="row">
-            <div class="pricing-col col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>HP LaserJet M1120 Multifunction Printer</h3>
-                    </div>
-                    <div class="card-body">
-                        <img class="printer" src="img/printer.jpg" alt="printer">
-                        <h2>#150.00</h2>
-                        <a href="cart.html" button class="btn btn-md btn-block btn-outline-dark" type="button">Shop To Cart</a>
-                    </div>
-                    </div>
-            </div>
+  <div class="pricing-col col-lg-4 col-md-6">
+      <div class="card">
+          <div class="card-header">
+              <h3 class="product-name" id="pName">Leather Traveling Bags</h3>
+          </div>
+          <div class="card-body">
+              <img class="bags" src="img/bags.jpg" alt="bags">
+              <h2 class="p-price" id="sellsPrice">$120.00</h2>
+              <button class="btn btn-md btn-block btn-outline-dark" onclick="shopGoods('Leather Traveling Bags' , 120, 1)">Shop To Cart</button>
+          </div>
+          </div>
+  </div>
+
+
+  <div class="pricing-col col-lg-4 col-md-6">
+      <div class="card">
+          <div class="card-header">
+              <h3 class="product-name" id="pName"> Bone Straight Weavon</h3>
+          </div>
+          <div class="card-body">
+              <img class="weavon" src="img/bone straight.jpg" alt="weavon">
+              <h2 class="p-price" id="sellsPrice">$750.00</h2>
+              <button class="btn btn-md btn-block btn-outline-dark" onclick="shopGoods('Bone Straight Weavon', 750, 1)">Shop To Cart</button>
+          </div>
+          </div>
+  </div>
+
+  <div class="pricing-col col-lg-4 col-md-6">
+      <div class="card">
+          <div class="card-header">
+              <h3 class="product-name" id="pName">Ladies Shoes</h3>
+          </div>
+          <div class="card-body">
+              <img class="shoes" src="img/shoes1.jpg" alt="shoes">
+              <h2 class="p-price" id="sellsPrice">$1085.00</h2>
+             <button class="btn btn-md btn-block btn-outline-dark" onclick="shopGoods('Ladies Shoes',1085, 1)">Shop To Cart</button>
+          </div>
+          </div>
+  </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6">
+              <img class="stores" src="img/market-img3.jpg" alt="stores photo">
+          </div>
+          <div class="col-md-6">
+              <img class="stores" src="img/market-img2.jpg" alt="stores photo2">
+          </div>
+      </div>
+  </section>
+  </div>
     
-    <div class="pricing-col col-lg-4 col-md-6">
-        <div class="card">
-            <div class="card-header">
-                <h3>Fashion Women Quartz Rhinestone Diamond</h3>
+<div id="cartContainer" class="my-space d-none">
+    <div class="container" >
+        <div class="row text-white bg-primary p-3">
+            <div class="col-sm-6 col-md-6 col-lg-6 mx-auto " id="cartCheckout">  
+                <div>
+                    <h3 class="text-center">Proceed to checkout</h3>
+                </div>
+                <div id="cartContainerItem">
+                  <p class="text-center text-brold font-weight-bold">Product Details <hr></p>
+                </div>
+                  <div id="bill" class="mt-5 ">
+                    <h4>Enter Billing Address</h4>
+                    <form  onsubmit="return payment()" name="paymentForm">
+                      <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control" name="fName" >
+                      </div>
+                      <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="email" >
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Enter Address</label>
+                        <textarea name="address" id="checkoutAddress" cols="3" rows=3 class="form-control"></textarea>
+                      </div>
+                      <div class="text-center">
+                        <button type="submit" class="btn my-btnColor text-white">Make Payment</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="alert alert-danger" id="error-msg"></div>
             </div>
-            <div class="card-body">
-                <img class="shoes" src="img/wristwatch1.jpg" alt="wristwatch">
-                <h2>#120.000</h2>
-                <a href="cart.html" button class="btn btn-md btn-block btn-outline-dark" type="button">Shop To Cart</a>
-            </div>
-            </div>
-    </div>
-    
-    <div class="pricing-col col-lg-4">
-        <div class="card">
-            <div class="card-header">
-                <h3>World's first Phone with 12 GB RAM</h3>
-            </div>
-            <div class="card-body">
-                <img class="shoes" src="img/phone1.jpg" alt="phone">
-                <h2>#985.000</h2>
-                <a href="cart.html" button class="btn btn-md btn-block btn-outline-dark" type="button">Shop To Cart</a>
-            </div>
-            </div>
-    </div>
-
-    <div class="pricing-col col-lg-4 col-md-6">
-        <div class="card">
-            <div class="card-header">
-                <h3>Leather Traveling Bags</h3>
-            </div>
-            <div class="card-body">
-                <img class="bags" src="img/bags.jpg" alt="bags">
-                <h2>#120.00</h2>
-                <a href="cart.html" button class="btn btn-md btn-block btn-outline-dark" type="button">Shop To Cart</a>
-            </div>
-            </div>
-    </div>
-
-
-    <div class="pricing-col col-lg-4 col-md-6">
-        <div class="card">
-            <div class="card-header">
-                <h3> Bone Straight Weavon</h3>
-            </div>
-            <div class="card-body">
-                <img class="weavon" src="img/bone straight.jpg" alt="weavon">
-                <h2>#750.00</h2>
-                <a href="cart.html" button class="btn btn-md btn-block btn-outline-dark" type="button">Shop To Cart</a>
-            </div>
-            </div>
-    </div>
-
-    <div class="pricing-col col-lg-4 col-md-6">
-        <div class="card">
-            <div class="card-header">
-                <h3>Ladies Shoes</h3>
-            </div>
-            <div class="card-body">
-                <img class="shoes" src="img/shoes1.jpg" alt="shoes">
-                <h2>#1085.00</h2>
-               <a href="cart.html" button class="btn btn-md btn-block btn-outline-dark" type="button">Shop To Cart</a>
-            </div>
-            </div>
-    </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <img class="stores" src="img/market-img3.jpg" alt="stores photo">
-            </div>
-            <div class="col-md-6">
-                <img class="stores" src="img/market-img4.jpg" alt="stores photo2">
+            <div class="col-sm-6 col-md-6 col-lg-6 mx-auto d-none mt-5" id="FlutterWave">
+              <h3>PayPal  HERE</h3>
+              <div id="paymentForm">
+                <ul class="list-group group list-group-flush">
+                  <li class="list-group-item disabled" id="clientName">Name</li>
+                  <li class="list-group-item disabled" id="clientEmail">Email</li>
+                  <li class="list-group-item disabled" id="amount">Amount</li>
+                </ul>
+                <div class="form-submit mx-auto">
+                  <button type="submit" class="btn" onclick="payWithFlutter()"> Pay </button>
+                </div>
+              </div>
             </div>
         </div>
-       
-    </section>
+    </div>
 
 
     <footer id="footer">
@@ -142,5 +195,6 @@
     <script src="bootstrap/js/popper.js"></script>
     <script src="bootstrap/js/jquery-3.2.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
