@@ -29,10 +29,10 @@ function shopGoods(product , price){
     }
     productTable.push(info);
 
-    for ( let i = 0 ;  i < allItems.length ; i++) {
+    for ( let i = 0 ;  i < productTable.length ; i++) {
 
-        totalPrice +=  +allItems[i].price
-        totalQuantity += +allItems[i].quantity;
+        totalPrice +=  +productTable[i].price
+        totalQuantity += +productTable[i].quantity;
 
    
     // To Display Total Price
