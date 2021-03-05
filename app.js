@@ -1,3 +1,6 @@
+let allItems = []
+let totalPrice = 0;
+let totalQuantity = 0;
 let productTable = [];
 
 let noOfGoods = document.getElementById('cart');
@@ -25,9 +28,25 @@ function shopGoods(product , price){
            
     }
     productTable.push(info);
-    console.log(productTable)
-    
 
+    for ( let i = 0 ;  i < allItems.length ; i++) {
+
+        totalPrice +=  +allItems[i].price
+        totalQuantity += +allItems[i].quantity;
+
+   
+    // To Display Total Price
+    
+    let priceContainer = document.getElementById("totalPrice");
+    priceContainer.innerHTML = totalPrice;
+
+
+       // to display quantity
+       let quantContainer = document.getElementById("totalQuantity");
+       quantContainer.innerHTML = totalQuantity;
+   }
+   let amt = document.getElementById('totalPrice').innerHTML;
+   document.getElementById('amount').value= amt;
  
 }
 
@@ -39,23 +58,20 @@ function showCart(){
     if (increase > 0){
         mainPage.classList.add('d-none')
         info.classList.remove('d-none');
-        return;
     }
-    for (const pros of productTable) {
-        console.log(pros)
-    }
-    // for (const products of productTable){
-    //     console.log(products.product)
-    //     // let create = document.createElement('p')
-    //     // let table = document.createTextNode(`
-    //     //     Product Name: ${table.product}, Product Price: ${table.price} 
-    //     // `);
-
-    //     // let display = document.getElementById('cartContainer')
-    //     // create.appendChild(display);
-    //     // homeCart.classList.remove('d-none');
-    // }
+    for (const item of productTable) {
+            
+        let container = document.createElement("p");
+        container.style.margin = "10px"
+        container.style.padding = "10px"
+        let productContent = document.createTextNode(`
+           Product Name :${item.name}, Product Price :${item.price}, Product Quantity : ${item.quantity} 
+        `);
+        container.appendChild(productContent);
+        var display = document.getElementById("cartContainerItem");
+        display.appendChild(container);
+  
+        // return;
+     }
+        console.log('am here')
 }
-
-
-showCart();
